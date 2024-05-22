@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package be_e9_integracio_crud_3;
+import java.sql.Date;
+
 
 /**
  *
@@ -34,12 +36,28 @@ public class BE_E9_INTEGRACIO_CRUD_3 {
         System.out.println("Nueva lista con los usuarios actualizados: ");
         */  
         
-        //CANVI DE EMAIL DEL USER2
+        //CANVI DE EMAIL DEL USER2 
         //UserDAO.getUserEmail("user2");
         //UserDAO.updateUserEmail("user2","noumail@gmail.com");
+               
+        //INSERIM UN NOU PRODUCTE
+        //ProductoDAO.insertProducto(100, "Joc escacs", "Oci", "Joc escacs de fusta de kaoba", 99.99f, 1, Date.valueOf("2024-05-22"), Date.valueOf("2029-05-22"));       
+        //ProductoDAO.printProductoDetails();
         
-                
+        //EDITEM LA QUANTITAT DEL PRODUCTE
+        //ProductoDAO.updateProductoCantidad("Joc escacs", 9);
         
+        //EDITEM LA QUANTITAT D'UN PRODUCTE QUE NO EXISTEIX
+        ProductoDAO.updateProductoCantidad("Armari", 9);
+        
+        //ELIMINEM UN PRODUCTE
+        //ProductoDAO.deleteProducto("Joc escacs");
+        //PREGUNTA:  COM ELIMINEM UN PRODUCTE JA EXISTENT A LA BBDD I QUE TÉ FOREIGN KEYS A ALTRES TAULES?
+        
+        //IMPRIMIM EL LLISTAT ACTUAL DE PRODUCTES
+        ProductoDAO.printProductoDetails();
+        
+       
     }
     
 }

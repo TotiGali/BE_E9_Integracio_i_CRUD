@@ -64,7 +64,7 @@ public class UserDAO {
         }catch(SQLException e){
             e.printStackTrace();
         }
-       } 
+    } 
      
     public static void updateUserEmail(String username, String newEmail){
         String query = "UPDATE users SET email = ? WHERE username = ?;";
@@ -82,7 +82,7 @@ public class UserDAO {
         } 
     }
     
-     public static String getUserEmail(String username){
+    public static String getUserEmail(String username){
         String email = "";
         String query = "SELECT email FROM users where username = ?;";
         try(Connection conn = DatabaseConnection.getConnection();
